@@ -1,11 +1,19 @@
 import express from "express";
-import { getAllCustomers, getCustomerById, addCustomer } from "../controllers/customers.controller.js";
+import { 
+    getAllCustomers, 
+    getCustomerById, 
+    addCustomer, 
+    updateCustomer,  //  Import update function
+    deleteCustomer   //  Import delete function
+} from "../controllers/customers.controller.js";
 
 const router = express.Router();
 
-// 📌 Route: Get All Customers
-router.get("/", getAllCustomers);
-router.get('/:id', getCustomerById);  // GET /api/customer/:id
-router.post("/", addCustomer); 
+// 📌 Routes
+router.get("/", getAllCustomers);         // Get all customers
+router.get("/:id", getCustomerById);       // Get a single customer
+router.post("/", addCustomer);             // Add a new customer
+router.put("/:id", updateCustomer);        // Update a customer
+router.delete("/:id", deleteCustomer);     //  Delete a customer
 
 export default router;

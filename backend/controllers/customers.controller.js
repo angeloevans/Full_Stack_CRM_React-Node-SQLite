@@ -52,7 +52,7 @@ export const addCustomer = (req, res) => {
 // Update Customer Data by ID ***
 export const updateCustomer = (req, res) => {
     const { id } = req.params;
-    const { lead, customer_name, customer_telephone, customer_address } = req.body;
+    const { lead, customer_name, customer_telephone, customer_email, customer_address } = req.body;
 
     if (lead && lead !== 'YES' && lead !== 'NO') {
         return res.status(400).json({ error: 'Invalid lead value. It must be "YES" or "NO".' });
@@ -64,11 +64,12 @@ export const updateCustomer = (req, res) => {
           lead = ?,
           customer_name = ?,
           customer_telephone = ?,
-          customer_address = ?
+          customer_email = ?,
+          customer_address = ?          
         WHERE id = ?
     `;
 
-    db.run(updateQuery, [lead || 'YES', customer_name, customer_telephone, customer_address, id], function (err) {
+    db.run(updateQuery, [lead || 'YES', customer_name, customer_telephone, customer_email, customer_address, id], function (err) {
         if (err) return res.status(500).json({ error: err.message });
         if (this.changes === 0) return res.status(404).json({ error: 'Customer not found' });
 
