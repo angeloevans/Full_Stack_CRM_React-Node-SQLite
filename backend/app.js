@@ -22,4 +22,10 @@ app.use("/api/activities", activitiesRoutes); // Use the activities Routes
 app.use("/api/customers", customersRoutes);    // Use the customers Routes
 app.use("/api/customer-activities", customerActivitiesRoutes);
 
+app.use((req, res, next) => {
+    console.log('Hit route:', req.originalUrl);
+    next();
+});
+
+
 export default app;  // Export the app for server.js
