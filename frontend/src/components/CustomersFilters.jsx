@@ -47,31 +47,35 @@ const CustomersFilters = ({ customers, updateFilteredCustomers }) => {
   }, [debouncedLead, debouncedCustomerName, customers, updateFilteredCustomers]);  // Dependencies ensure it runs only when relevant values change
 
   return (
-    <div className="bg-gray-100 p-4 rounded-lg shadow-md mb-4">
-      <div className="flex flex-wrap gap-4 items-center">
+    <div className="bg-[#F2F8FF] p-6 rounded-lg shadow-lg mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        {/* Customer Lead Filter */}
         <div className="flex flex-col">
-          <label className="text-sm font-medium text-gray-700">Customer Lead:</label>
+          <label className="text-sm font-semibold text-[#0B9FE3] mb-2">Customer Lead:</label>
           <select
             value={selectedLead}
             onChange={(e) => setSelectedLead(e.target.value)}
-            className="border rounded-md p-2 text-sm w-44 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="border rounded-lg p-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
           >
             <option value="">Select Lead</option>
             <option value="YES">Yes</option>
             <option value="NO">No</option>
           </select>
         </div>
-        
+
+        {/* Customer Name Filter */}
         <div className="flex flex-col">
-          <label className="text-sm font-medium text-gray-700">By Customer Name:</label>
+          <label className="text-sm font-semibold text-[#0B9FE3] mb-2">By Customer Name:</label>
           <input
             type="text"
             value={selectedCustomerName}
             onChange={(e) => setSelectedCustomerName(e.target.value)}
             placeholder="Search by Customer Name"
-            className="border rounded-md p-2 text-sm w-56 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="border rounded-lg p-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
           />
         </div>
+
       </div>
     </div>
   );

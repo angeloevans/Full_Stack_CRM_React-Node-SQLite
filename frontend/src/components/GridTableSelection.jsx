@@ -1,4 +1,3 @@
-// Grid Table Component that generates a Grid Table with the input of headers & rows & selection for navigation to details page
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -8,33 +7,33 @@ const GridTableSelection = ({ headers, rows, detailsPage, keyName }) => {
   // Get the index of the key column dynamically
   const keyIndex = headers.indexOf(keyName);
 
-  // we give the detailsPage from Routes of App.jsx to navigate to our 'details-page'
+  // Dynamic navigation function
   const goToDetails = (keyValue) => {
-    navigate(`/${detailsPage}/details/${keyValue}`);
-  }; 
+    navigate(`/${detailsPage}/details/${keyValue}`); // Use detailsPage dynamically
+  };
 
   return (
-    <div className="table-container overflow-x-auto">
+    <div className="table-container overflow-x-auto p-4 bg-[#F2F8FF] shadow-lg rounded-lg mb-6">
       <div className="overflow-x-auto max-h-[400px]">
-        <table className="custom-table min-w-full table-auto bg-white border border-gray-200 shadow-md">
-          <thead className="bg-gray-700 text-white text-xs sticky top-0 z-10">
+        <table className="min-w-full table-auto bg-white border border-gray-200 shadow-md rounded-lg">
+          <thead className="bg-[#0B9FE3] text-white text-sm sticky top-0 z-10">
             <tr>
               {headers.map((header, index) => (
-                <th key={index} className="px-3 py-2 text-left font-light">{header}</th>
+                <th key={index} className="px-4 py-3 text-left font-medium">{header}</th>
               ))}
-              <th className="px-3 py-2 text-left font-light">Actions</th>
+              <th className="px-4 py-3 text-left font-medium">Actions</th>
             </tr>
           </thead>
-          <tbody className="bg-gray-50 divide-y divide-gray-200 text-xs">
+          <tbody className="bg-gray-50 divide-y divide-gray-200 text-sm">
             {rows.map((row, rowIndex) => (
-              <tr key={rowIndex} className="border-b hover:bg-gray-50">
+              <tr key={rowIndex} className="hover:bg-[#E6F4FB]">
                 {row.map((cell, cellIndex) => (
-                  <td key={cellIndex} className="px-4 py-2 border-b">{cell}</td>
+                  <td key={cellIndex} className="px-4 py-3 border-b">{cell}</td>
                 ))}
-                <td className="px-4 py-2 border-b">
-                  {keyIndex !== -1 && ( 
+                <td className="px-4 py-3 border-b">
+                  {keyIndex !== -1 && (
                     <button
-                      className="bg-blue-500 hover:bg-blue-700 text-white text-xs font-bold py-1 px-3 rounded"
+                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded transition-all"
                       onClick={() => goToDetails(row[keyIndex])} 
                     >
                       Select
@@ -47,7 +46,9 @@ const GridTableSelection = ({ headers, rows, detailsPage, keyName }) => {
         </table>
       </div>
     </div>
+
   );
+  
 };
 
 export default GridTableSelection;
