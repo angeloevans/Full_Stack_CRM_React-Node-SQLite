@@ -18,11 +18,18 @@ const NavBar = () => {
                     >
                         Home
                     </Link>
+
                     <Link
-                        to="/activities"
+                        to="/my-activities"
                         className="text-white text-sm font-medium px-4 py-2 rounded-md bg-[#2c3e50] hover:bg-[#34495e] active:bg-[#16a085] transition-all duration-300"
                     >
-                        Activities
+                        My Activities
+                    </Link>
+                    <Link
+                        to="/add-activity"
+                        className="text-white text-sm font-medium px-4 py-2 rounded-md bg-[#2c3e50] hover:bg-[#34495e] active:bg-[#16a085] transition-all duration-300"
+                    >
+                        Add Activity
                     </Link>
 
                     <Link

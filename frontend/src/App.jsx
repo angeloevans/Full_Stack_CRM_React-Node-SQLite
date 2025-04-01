@@ -1,34 +1,37 @@
 import React from "react";
-import { Routes, Route, } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // Import Components & Pages
 import NavBar from './components/NavBar'
 import HomePage from './pages/HomePage'
-import Activities from './pages/Activities'
+import MyActivities from './pages/MyActivities'
+import AddActivity from "./pages/AddActivity";
 import Customers from './pages/Customers'
 import CustomerDetails from "./pages/CustomerDetails";
 import CreateCustomer from "./pages/CreateCustomer";
 
-
-// Import Style - We only use tailwind -
+// Import Styles (Tailwind)
 import './index.css'
 
-const App = () =>  {  
+const App = () => {  
   return (
     <>
-     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <NavBar />
-        <Routes> 
-          <Route path="/" element={<HomePage />} />
-          <Route path="/Activities" element={<Activities />} />
-          <Route path="/Customers" element={<Customers />} />
-          <Route path="/Customer-details" element={<CustomerDetails />} />
-          <Route path="/customers/details/:id" element={<CustomerDetails />} />
-
-        </Routes>
-    </div>
+      <div className="min-h-screen bg-gray-100">
+        <NavBar />
+        <div className="container mx-auto p-5">
+          <Routes> 
+            <Route path="/" element={<HomePage />} />
+            <Route path="/activities" element={<MyActivities />} />  {/* Fixed: Corrected Activities */}
+            <Route path="/customers" element={<Customers />} />
+            <Route path="/create-customer" element={<CreateCustomer />} />
+            <Route path="/customer-details/:id" element={<CustomerDetails />} />
+            <Route path="/my-activities" element={<MyActivities />} />  
+            <Route path="/add-activity" element={<AddActivity />} />
+          </Routes>
+        </div>
+      </div>
     </>
   )
 }
 
-export default App
+export default App;
