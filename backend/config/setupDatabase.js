@@ -33,6 +33,22 @@ db.serialize(() => {
     }
   });
 
+  // Insert to activities table Basic Activities
+  db.run(`
+    INSERT INTO activities (activity)
+    VALUES 
+    ('Phone Call'),
+    ('Meeting'),
+    ('Task'),
+    ('Note');
+  `, (err) => {
+    if (err) {
+      console.error('Error creating activities table:', err.message);
+    } else {
+      console.log('✅ Activities table data ready.');
+    }
+  });
+
   // Create customer_activities table (Many-to-Many Relationship)
   db.run(`
     CREATE TABLE IF NOT EXISTS customer_activities (
@@ -51,4 +67,5 @@ db.serialize(() => {
       console.log('✅ Customer_Activities table ready.');
     }
   });
+
 });
