@@ -116,8 +116,9 @@ Allowed Headers: Content-Type
 JSON Parsing <br>
 The server uses middleware to automatically parse incoming JSON requests, making it easier to handle and process JSON data.
 
-## 📜 License
-This project is licensed under the MIT License.
+## License 📜
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
