@@ -86,6 +86,8 @@ To build for production:
 ```bash
 npm run build
 ```
+## Additional Note
+You must start from Creating a Customer first in order to add an Activity!
 
 ## License 📜
 
