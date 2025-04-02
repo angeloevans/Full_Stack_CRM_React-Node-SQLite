@@ -19,25 +19,25 @@ const HomePage = () => {
                         <span className="text-blue-500">
                             <FontAwesomeIcon icon={faUsers} />
                         </span>
-                        Customer Management – Easily store and update customer details.
+                        Customer Management <span className="font-normal">– Easily store and update customer details.</span>
                     </li>              
                     <li className="flex items-center gap-2 text-gray-700 text-sm md:text-base font-medium">
                         <span className="text-blue-500">
                             <FontAwesomeIcon icon={faClipboardList} />
                         </span>
-                        Activity Tracking – Keep a log of all customer-related activities.
+                        Activity Tracking <span className="font-normal">– Keep a log of all customer-related activities.</span>
                     </li>
                     <li className="flex items-center gap-2 text-gray-700 text-sm md:text-base font-medium">
                         <span className="text-blue-500">
                             <FontAwesomeIcon icon={faFilter} />
                         </span>
-                        Smart Filters – Quickly find customers and activities using powerful search and filtering options.
+                        Smart Filters <span className="font-normal">– Quickly find customers and activities using powerful search and filtering options.</span>
                     </li>
                     <li className="flex items-center gap-2 text-gray-700 text-sm md:text-base font-medium">
                         <span className="text-blue-500">
                             <FontAwesomeIcon icon={faUser} />
                         </span>
-                        User-Friendly Interface – Designed for simplicity and efficiency.
+                        User-Friendly Interface <span className="font-normal">– Designed for simplicity and efficiency.</span>
                     </li>
                 </p>
                 <div className="mt-6">
