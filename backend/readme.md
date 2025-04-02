@@ -69,9 +69,9 @@ The backend uses **SQLite** as the database to store and manage data.
 #### The configuration for SQLite database
 /config/db.js 
 <br>
-The database name is <strong> crm.db </strong>
+The empty database is <strong> crm.db </strong>
 #### Creating the Database Schema
-
+You can re-create it:
     
     cd config
     node setupDatabase.js
