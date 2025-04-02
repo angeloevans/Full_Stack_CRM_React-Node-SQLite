@@ -47,13 +47,13 @@ const ActivityDetails = () => {
   };
 
   return (
-<div className="max-w-2xl mx-auto p-6 bg-[#F2F8FF] shadow-lg rounded-xl border mb-6">
-  <h1 className="text-3xl font-semibold text-[#0B9FE3] mb-6 text-center">Activities</h1>
+  <div className="activities-table-wrapper mx-auto my-4 p-15 max-w-7xl bg-white">
+  <h1 className="text-3xl font-semibold text-[#0B9FE3] mb-6 text-center">Selected Customer Activities</h1>
 
   {/* Render the table directly from given headers & rows */}
   {activities.length > 0 ? (
-    <table className="min-w-full table-auto bg-white border border-gray-200 shadow-md">
-      <thead className="bg-gray-700 text-white text-xs">
+   <table className="min-w-full table-auto bg-white border border-gray-200 shadow-md rounded-lg">
+       <thead className="bg-[#0B9FE3] text-white text-sm sticky top-0 z-10">
         <tr>
           {headers.map((header) => (
             <th key={header} className="px-3 py-2 text-left font-light">
@@ -63,7 +63,7 @@ const ActivityDetails = () => {
           <th className="px-3 py-2 text-left font-light">Actions</th>
         </tr>
       </thead>
-      <tbody className="bg-gray-50 divide-y divide-gray-200 text-xs">
+      <tbody className="bg-gray-50 divide-y divide-gray-200 text-sm">
         {rows.map((row, index) => {
           const [activityId, customerId] = row; // rows data 
 

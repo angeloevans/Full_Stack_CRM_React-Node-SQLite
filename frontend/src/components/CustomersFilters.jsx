@@ -47,8 +47,8 @@ const CustomersFilters = ({ customers, updateFilteredCustomers }) => {
   }, [debouncedLead, debouncedCustomerName, customers, updateFilteredCustomers]);  // Dependencies ensure it runs only when relevant values change
 
   return (
-    <div className="bg-[#F2F8FF] p-6 rounded-lg shadow-lg mb-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="bg-[#ffffff] p-6 rounded-xl shadow-lg mb-6">
+     <div className="flex flex-wrap gap-6 items-center">
 
         {/* Customer Lead Filter */}
         <div className="flex flex-col">
@@ -72,7 +72,7 @@ const CustomersFilters = ({ customers, updateFilteredCustomers }) => {
             value={selectedCustomerName}
             onChange={(e) => setSelectedCustomerName(e.target.value)}
             placeholder="Search by Customer Name"
-            className="border rounded-lg p-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+            className="border rounded-lg p-2 text-sm w-56 focus:outline-none focus:ring-2 focus:ring-[#0B9FE3]"
           />
         </div>
 

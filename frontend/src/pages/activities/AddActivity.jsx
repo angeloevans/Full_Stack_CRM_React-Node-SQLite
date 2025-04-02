@@ -67,7 +67,7 @@ const AddActivity = () => {
     };
 
     return (
-        <div className="max-w-lg mx-auto mt-10 p-6 bg-[#F2F8FF] shadow-md rounded-lg">
+        <div className="max-w-lg mx-auto mt-10 p-15 bg-[#F2F8FF] shadow-md rounded-lg">
             <h2 className="text-2xl font-semibold text-[#0B9FE3] mb-4">Add Customer Activity</h2>
 
             {/* Show error message if any */}

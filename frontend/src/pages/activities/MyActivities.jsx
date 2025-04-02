@@ -28,7 +28,7 @@ const Activities = () => {
   const keyIndex = headers.indexOf(keyName);  // Find the position of the key column dynamically
 
   return (
-    <div className="activities-table-wrapper mx-auto my-4 p-6 max-w-7xl bg-[#F2F8FF]">
+    <div className="activities-table-wrapper mx-auto my-4 p-15 max-w-7xl bg-white">
       <h1 className="text-4xl font-semibold text-[#0B9FE3] text-center mb-6">My Activities</h1>
       
       {/* Activity Filter Component */}

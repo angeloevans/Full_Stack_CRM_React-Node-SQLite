@@ -26,10 +26,9 @@ const Customers = () => {
   const keyName = "id"; // Explicitly define the key column
   const keyIndex = headers.indexOf(keyName); // Find the position of the key column dynamically
 
-  return (
-    <div className="bg-[#F2F8FF] min-h-screen p-6">
-      <div className="customer-table-wrapper mx-auto mt-10 p-6 max-w-7xl bg-white shadow-lg rounded-lg">
-        <h1 className="text-3xl font-semibold text-center mb-6 text-gray-700">My Customers</h1>
+  return (   
+      <div className="customer-table-wrapper mx-auto my-4 p-15 max-w-7xl bg-white">
+        <h1 className="text-4xl font-semibold text-[#0B9FE3] text-center mb-6">My Customers</h1>
         <CustomersFilters
           customers={customers} 
           updateFilteredCustomers={setFilteredCustomers}
@@ -50,7 +49,7 @@ const Customers = () => {
           <p className="text-center text-red-500">No Customers data available.</p>
         )}
       </div>
-    </div>
+    
   );
   
 };

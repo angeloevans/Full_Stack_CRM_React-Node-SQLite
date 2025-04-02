@@ -13,7 +13,7 @@ const GridTableSelection = ({ headers, rows, detailsPage, keyName }) => {
   };
 
   return (
-    <div className="table-container overflow-x-auto p-4 bg-[#F2F8FF] shadow-lg rounded-lg mb-6">
+    <div className="table-container overflow-x-auto p-4 bg-white shadow-lg rounded-lg mb-6">
       <div className="overflow-x-auto max-h-[400px]">
         <table className="min-w-full table-auto bg-white border border-gray-200 shadow-md rounded-lg">
           <thead className="bg-[#0B9FE3] text-white text-sm sticky top-0 z-10">

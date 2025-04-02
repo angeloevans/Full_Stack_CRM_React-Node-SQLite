@@ -77,7 +77,7 @@ const CustomerDetails = () => {
   if (!customer) return <p>Customer not found.</p>;
 
     return (
-      <div className="max-w-2xl mx-auto p-6 bg-[#F2F8FF] shadow-lg rounded-xl border mb-6">
+      <div className="max-w-2xl mx-auto mt-10 p-6 bg-[#F2F8FF] shadow-lg rounded-xl border mb-6">
         <h1 className="text-3xl font-semibold text-[#0B9FE3] mb-6 text-center">Customer Details</h1>
 
         {error && <p className="bg-red-100 text-red-600 p-3 rounded-md text-center mb-4">{error}</p>}
@@ -91,7 +91,7 @@ const CustomerDetails = () => {
               name="lead"
               value={customer.lead}
               onChange={handleChange}
-              className="w-full p-3 border rounded-md focus:ring-2 focus:ring-[#0B9FE3]"
+              className="w-full p-3 border border-[#B9DCFF] bg-white rounded-lg focus:ring-2 focus:ring-[#0B9FE3] focus:outline-none"
             >
               <option value="YES">YES</option>
               <option value="NO">NO</option>
@@ -107,7 +107,7 @@ const CustomerDetails = () => {
               value={customer.customer_name}
               onChange={handleChange}
               required
-              className="w-full p-3 border rounded-md focus:ring-2 focus:ring-[#0B9FE3]"
+              className="w-full p-3 border border-[#B9DCFF] bg-white rounded-lg focus:ring-2 focus:ring-[#0B9FE3] focus:outline-none"
             />
           </div>
 
@@ -120,7 +120,7 @@ const CustomerDetails = () => {
               value={customer.customer_telephone}
               onChange={handleChange}
               required
-              className="w-full p-3 border rounded-md focus:ring-2 focus:ring-[#0B9FE3]"
+              className="w-full p-3 border border-[#B9DCFF] bg-white rounded-lg focus:ring-2 focus:ring-[#0B9FE3] focus:outline-none"
             />
           </div>
 
@@ -132,7 +132,7 @@ const CustomerDetails = () => {
               name="customer_email"
               value={customer.customer_email}
               onChange={handleChange}
-              className="w-full p-3 border rounded-md focus:ring-2 focus:ring-[#0B9FE3]"
+              className="w-full p-3 border border-[#B9DCFF] bg-white rounded-lg focus:ring-2 focus:ring-[#0B9FE3] focus:outline-none"
             />
           </div>
 
@@ -144,7 +144,7 @@ const CustomerDetails = () => {
               name="customer_address"
               value={customer.customer_address}
               onChange={handleChange}
-              className="w-full p-3 border rounded-md focus:ring-2 focus:ring-[#0B9FE3]"
+              className="w-full p-3 border border-[#B9DCFF] bg-white rounded-lg focus:ring-2 focus:ring-[#0B9FE3] focus:outline-none"
             />
           </div>
 

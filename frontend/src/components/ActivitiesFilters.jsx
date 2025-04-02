@@ -58,7 +58,7 @@ const ActivitiesFilters = ({ activities, updateFilteredActivities }) => {
   }, [debouncedType, debouncedDate, debouncedCustomerName, activities, updateFilteredActivities]);
 
   return (
-    <div className="bg-[#F2F8FF] p-6 rounded-xl shadow-lg mb-6">
+    <div className="bg-[#ffffff] p-6 rounded-xl shadow-lg mb-6">
     <div className="flex flex-wrap gap-6 items-center">
       {/* Date Filter */}
       <div className="flex flex-col">
@@ -88,7 +88,7 @@ const ActivitiesFilters = ({ activities, updateFilteredActivities }) => {
   
       {/* Customer Name Filter */}
       <div className="flex flex-col">
-        <label className="text-sm font-semibold text-[#0B9FE3] mb-1">By Customer Name:</label>
+        <label className="text-sm font-semibold text-[#0B9FE3] mb-1">Customer Name:</label>
         <input 
           type="text" 
           value={selectedCustomerName} 
